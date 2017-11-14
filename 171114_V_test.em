@@ -1889,7 +1889,7 @@ System System( /CELL/CYTOPLASM/SEPARATOR )
 @include( 'IsotonicContraction.em' )
 
 @# 細胞膜上のイオンチャネル
-@#include( 'INa.em' )     @# Na, K
+@include( 'INa.em' )     @# Na, K
 @include( 'INa_HuVEC.em' )     @# Na, K
 @include( 'ICaL_V.em' )    @# Na, K, Ca
 @include( 'ICaT.em' )    @#        Ca
