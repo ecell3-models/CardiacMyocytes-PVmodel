@@ -1912,7 +1912,7 @@ System System( /CELL/CYTOPLASM/SEPARATOR )
 @include( 'IVRCC.em' )   @#            Cl
 @include( 'ICFTR.em' )   @#            Cl
 
-@include( 'Iha.em' )     @# Na, K
+@#include( 'Iha.em' )     @# Na, K
 
 @# 筋小胞体
 @include( 'IRyR.em' )
