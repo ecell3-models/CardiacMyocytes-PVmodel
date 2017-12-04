@@ -234,6 +234,11 @@ System System(/CELL/MEMBRANE/IKur)
 		Value	0; #tmp
 	}
 
+	Variable Variable( GX )
+	{
+		Value 1.0;
+	}
+
 	Process ExpressionAssignmentProcess( i_Kur )
 	#i_Kr = g_Kr * root(K_o / 5.4 {unit: millimolar}) * Xr1 * Xr2 * (V - E_K);
 	{
@@ -241,6 +246,7 @@ System System(/CELL/MEMBRANE/IKur)
 		Priority 10;
 
 		VariableReferenceList
+			[ GX :.:GX 0 ]
 			[ V :..:Vm 0 ]
 			[ G_Kur :.:G_Kur 0]
 			[ E_K :.:E_K 0 ]
@@ -249,9 +255,7 @@ System System(/CELL/MEMBRANE/IKur)
 			[ i  :.:i 0 ]
 	                [ i_Kur :.:I 1 ];
         
-		GX 1.0;
-		
-		Expression "GX * G_Kur.Value * pow(a.Value,3.0) * i.Value * (V.Value - E_K.Value)";
+		Expression "GX.Value * G_Kur.Value * pow(a.Value,3.0) * i.Value * (V.Value - E_K.Value)";
 	}
 
 #	Process ExpressionFluxProcess( K_i )
