@@ -1,0 +1,2 @@
+Variable:/CELL/MEMBRANE/Iha:GX:Value,0,1.0,X,
+Variable:/CELL/MEMBRANE/IKur:GX:Value,0,1.0,Y,
